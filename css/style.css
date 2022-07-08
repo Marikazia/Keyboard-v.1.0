@@ -17,9 +17,22 @@
   width: 1440px;
 }
 
+.out-1 {
+  background: #aaaaaa;
+  min-height: 100px;
+  width: 700px;
+  margin-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .i-11 {
   margin: 0 10%;
   width: 700px;
+  min-height: 50px;
+  padding: 5px 15px;
 }
 
 .out-11 {
@@ -37,10 +50,6 @@
   border-radius: 6px;
   line-height: 48px;
   text-align: center;
-}
-
-.keyboard[data="space"] {
-  width: 112px;
 }
 
 .active {
@@ -75,7 +84,6 @@ h1 {
   margin-bottom: 40px;
 }
 
-/* ========================= */
 /* ========================= */
 .keyboard {
   border: 1px solid slategray;
