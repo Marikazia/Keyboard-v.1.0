@@ -4,15 +4,27 @@
 
 const i11 =  document.querySelector('.i-11');
 const out1 =  document.querySelector('.out-1');
+const kb = document.querySelector('.keyboard');
+const kk = document.querySelector('.key');
+// const kl = document.querySelector('.line');
+// const kl1 = document.querySelector('.line-1');
+// const kl2 = document.querySelector('.line-2');
+// const kl3 = document.querySelector('.line-3');
+// const kl4 = document.querySelector('.line-4');
+// const kl5 = document.querySelector('.line-5');
 
 const keyboard =  document.querySelectorAll('.key'); //получить элементы с классом key
 const symbol = {
   "Control" : "ctrl",
 }
-
+// let key = event.key;
+//     if (event.keyCode == 32) key = 'space';
+//     if (event.keyCode == 17) key = 'ctrl';
+//     if (event.keyCode == 18) key = 'alt';
+//     if (event.keyCode == 13) key = 'enter';.
 
 function t11(event) {
-
+	
 	console.log(event.key);
 	let k = event.key;
 	if ( symbol[k] !== undefined) k = symbol[k];
@@ -25,7 +37,26 @@ function t11(event) {
 
 }
 
-document.querySelector('.i-11').onkeydown = t11;
+i11.onkeydown = t11;
+
+///////////////////////
+
+function f4(event) {
+	console.log(event.target.innerHTML);
+	out1.innerHTML += event.target.innerText;
+
+	// if (event.target.closest(kb)) {
+	// 	out1.innerHTML += event.target.innerHTML;
+	// }
+	// else {
+	// 	return false;
+	// }
+	
+}
+
+kb.onclick = f4;
+
+
 
 // Додати он клік для виводу з кнопок в інпут
 // let i11 =  document.querySelector('.i-11')
@@ -41,7 +72,7 @@ document.querySelector('.i-11').onkeydown = t11;
 // document.querySelector('.key').onclick = t4;
 // .attr('data-product_variations')
 
-// const kk = document.querySelector('.keyboard');
+
 // const dv = document.querySelectorAll('data').value;
 
 
@@ -84,7 +115,7 @@ document.querySelector('.i-11').onkeydown = t11;
 // console.log(i11);
 
 // kk.addEventListener("click", function (event) {
-// 	let newi = [];
+// 	// let newi = [];
 // 	let sv = event.target.innerText;
 // 	newi.push(sv);
 // 	console.log(newi);
@@ -93,12 +124,11 @@ document.querySelector('.i-11').onkeydown = t11;
 // Array.prototype.push.apply(vegetables, moreVegs);
 
 
-// let i11 = document.querySelector('.i-11');
 // function f4() {
 //     // console.log(d1);
 //     console.log(i11.value);
-//     i11.push(kk.value);
-//     showArr('.i-11', kk);
+//     // i11.push(kk.value);
+//     // showArr('.i-11', kk);
 // }
 
-// document.querySelector(kk).onclick = f4;
+// kk.onclick = f4;
