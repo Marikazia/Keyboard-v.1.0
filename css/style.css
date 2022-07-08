@@ -3,12 +3,13 @@
   box-sizing: border-box;
 }
 
-.container {
-  width: 100%;
-}
-
 .total-block {
-  margin-top: 5%;
+  position: relative;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  margin-top: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +41,7 @@
   display: flex;
   justify-content: space-between;
   background: #242424;
+  text-transform: lowercase;
 }
 
 .keyboard {
@@ -62,7 +64,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Quattrocento', sans-serif;
 }
 
 .text-center {
