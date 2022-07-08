@@ -13,7 +13,7 @@ const kk = document.querySelector('.key');
 // const kl4 = document.querySelector('.line-4');
 // const kl5 = document.querySelector('.line-5');
 
-const keyboard =  document.querySelectorAll('.key'); //получить элементы с классом key
+// const keyboard =  document.querySelectorAll('.key'); //получить элементы с классом key
 const symbol = {
   "Control" : "ctrl",
 }
@@ -41,21 +41,65 @@ i11.onkeydown = t11;
 
 ///////////////////////
 
-function f4(event) {
-	console.log(event.target.innerHTML);
-	out1.innerHTML += event.target.innerText;
 
-	// if (event.target.closest(kb)) {
-	// 	out1.innerHTML += event.target.innerHTML;
-	// }
-	// else {
-	// 	return false;
-	// }
+
+// function f4(event) {
+// 	console.log(event.target.innerHTML);
+// 	out1.innerHTML += event.target.innerText;
+// 	// kb.classList.toggle('active');
+
+
+// 	// if (event.target.closest(kb)) {
+// 	// 	out1.innerHTML += event.target.innerHTML;
+// 	// }
+// 	// else {
+// 	// 	return false;
+// 	// }
 	
+// }
+
+// kb.onclick = f4;
+
+///////////////////
+
+const keys = document.querySelectorAll(".key");
+for (const key of keys) {
+	key.addEventListener("click", (event) => {
+		out1.innerHTML += event.target.innerText;
+	})
+	
+	key.addEventListener("mousedown", (event) => {
+		event.target.classList.add('active');
+	})
+
+	key.addEventListener("mouseup", (event) => {
+		event.target.classList.remove('active');
+	})
 }
 
-kb.onclick = f4;
+// function getThisKey() {
+// 	const myk = document.querySelectorAll(".key");
+// 	for (let i=0; i<myk.length; i++) {
+// 		console.log([i]);
+// 	}
+// }
 
+
+// f31 = () => {
+// 	kb.classList.add('active');
+// }
+// kb.onmousedown = f31;
+
+// f32 = () => {
+// 	kb.classList.remove('active');
+// }
+// kb.onmouseup = f32;
+
+
+// t12 = () => {
+//     document.querySelector('.div-12').classList.toggle('active');
+// }
+// document.querySelector('.div-12').onmousedown = t12;
 
 
 // Додати он клік для виводу з кнопок в інпут
